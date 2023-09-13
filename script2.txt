@@ -1,1 +1,1 @@
-cho "Hello, world! from $(hostname -f)"	>> /var/www/html/index.html
+cho "Hello, world! from $(hostname -f)"	| sudo tee /var/www/html/index.html
