@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Update the package repository and install Apache 2
+sudo apt-get update
+sudo apt-get install -y apache2
+
+# Create a custom webpage
+echo "<html>
+<head>
+    <title>Sri Eshwar Engineering College</title>
+</head>
+<body>
+    <h1>Welcome to Sri Eshwar Engineering College</h1>
+    <p>Aws Training Session Main Page.</p>
+</body>
+</html>" | sudo tee /var/www/html/index.html
+
+
+# Create a custom webpage
+echo "<html>
+<head>
+    <title>Sri Eshwar Engineering College</title>
+</head>
+<body>
+    <h1>Welcome to Sri Eshwar Engineering College</h1>
+    <p>Aws Training Session Server1 Page.</p>
+</body>
+</html>" | sudo tee /var/www/html/server1.html
+
+
+# Start Apache2 and enable it to start on boot
+sudo systemctl start apache2
+sudo systemctl enable apache2
